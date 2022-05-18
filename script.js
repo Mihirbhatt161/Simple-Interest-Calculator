@@ -1,10 +1,18 @@
-var principal = document.getElementById("principal").value;
-var rate = document.getElementById("rate").value;
-var years = document.getElementById("years").value;
-var interest = principal * years * rate /100;
-var year = new Date().getFullYear()+parseInt(years);
-function updateRate() 
-{
-    var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval;
-}
+
+let calculateBtn = document.getElementById("calculate-btn");
+let result = document.getElementById("result");
+let calculate = () => {
+  let p = Number(document.getElementById("principal").value);
+  let r = Number(document.getElementById("rate").value);
+  let t = Number(document.getElementById("time").value);
+  let duration = document.getElementById("duration").value;
+  let simpleInterest =
+    duration == "year" ? (p * r * t) / 100 : (p * r * t) / 1200;
+  let amount = p + simpleInterest;
+  result.innerHTML = `<div>If you deposit <span>$${p.toFixed(2)}</span></div>
+  <div>at an interest rate of <span>%${p.toFixed(2)}.</span></div>
+  <div>You will receive an amount of <span>${simpleInterest.toFixed(2)}</span></div>
+  <div>in the year <span>${t.toFixed(2)}</span></div>`;
+};
+calculateBtn.addEventListener("click", calculate);
+window.addEventListener("load", calculate);
