@@ -7,3 +7,4 @@ This Simple Interest Clculator build with HTML, CSS and Javascript which fetch y
 - scroll the rate & dropdown the time
 - Let's check your Interest
 - ✨Magic ✨
+![images](https://user-images.githubusercontent.com/84664712/193035253-d0e1ef35-568f-4f97-b8df-6cc33dddc421.png)
